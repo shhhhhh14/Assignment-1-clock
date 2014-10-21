@@ -1,0 +1,2 @@
+class clock
+end

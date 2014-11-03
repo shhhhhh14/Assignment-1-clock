@@ -1,4 +1,4 @@
-class AlarmClock
+class Alarm_Clock
   require_relative 'Clock'
 
   def initialize(hours, minutes, seconds)
@@ -11,7 +11,7 @@ class AlarmClock
 
   end
 
-  def alarmClock()
+  def alarm_clock()
     return @alarm
   end
 end

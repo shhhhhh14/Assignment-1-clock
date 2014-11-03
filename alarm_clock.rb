@@ -1,10 +1,9 @@
-class Alarm_Clock
-  require_relative 'Clock'
+class Alarm_Clock < Clock
 
   def initialize(hours, minutes, seconds)
-    @hours = hours.to_s
-    @minutes = minutes.to_s
-    @seconds = seconds.to_s
+    @hours = hours
+    @minutes = minutes
+    @seconds = seconds
 
     @alarm = [@hours, @minutes, @seconds]
     puts "Alarm set: #{@alarm}"

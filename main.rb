@@ -1,14 +1,15 @@
+
 class Main
   require_relative 'Clock'
   require_relative 'Alarm_Clock'
 
   file = File.open("time.txt", "r")
-  hours =  file.readline.chomp
-  minutes = file.readline.chomp
-  seconds = file.readline.chomp
+  hours =  file.readline.chomp.to_i
+  minutes = file.readline.chomp.to_i
+  seconds = file.readline.chomp.to_i
 
-  time = Clock.new(line[0],line[1],line[2])
-  puts time.to_s
+  time = Clock.new(hours,minutes,seconds)
+  puts time
 
   i= 0
   until i == 10 do

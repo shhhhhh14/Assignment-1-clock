@@ -1,6 +1,6 @@
 class Main
   require_relative 'Clock'
-  require_relative 'AlarmClock'
+  require_relative 'Alarm_Clock'
 
   file = File.open("time.txt", "r")
   hours =  file.readline.chomp

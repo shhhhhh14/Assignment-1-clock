@@ -1,4 +1,4 @@
-class ReverseClock < Clock
+class Reverse_Clock < Clock
     attr_accessor :hours, :minutes, :seconds
 
     def initialize(hours, minutes,seconds)
@@ -7,21 +7,30 @@ class ReverseClock < Clock
       @seconds = seconds
     end
 
+    def current_rev_time(x, y, z) # checks that the current time is in the correct format
+      @hours = x
+      @minutes = y
+      @seconds = z
+
+      @current_rev_time = current_rev_time(@hours, @minutes, @seconds)
+    end
+
     def to_s
       puts "#{@hours}:#{@minutes}:#{@seconds}"
     end
 
-    def tick
+    def tick #decrements the clock by ticking as its the rev_clock
       @seconds -= 1
       case
-        when @seconds > 59	#this will add a minute for every second over 59
+        when @seconds > 59
           @minutes -= 1
           @seconds = 0
-        when @minutes > 59	#this adds an hour for every minute over 59
+        when @minutes > 59
           @hours -= 1
           @minutes = 0
         when @hours > 23
           @hours = 0
       end
     end
-  end
+end
+

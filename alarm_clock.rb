@@ -10,7 +10,7 @@ class Alarm_Clock < Clock
 
   end
 
-  def alarm_clock()
+  def alarm_clock
     return @alarm
   end
 end
